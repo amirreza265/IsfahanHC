@@ -1,0 +1,50 @@
+﻿@model OrderViewModel
+@{
+    ViewData["Title"] = "Current";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">نام محصول</th>
+            <th scope="col">تعداد</th>
+            <th scope="col">قیمت</th>
+            <th scope="col">دستورات</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.OrderItems.Any())
+            foreach (var orderItem in Model.OrderItems)
+            {
+                <tr>
+                    <td>
+                        <a class="btn-light"
+                           asp-action="index"
+                           asp-controller="Product"
+                           asp-route-id="@orderItem.ProductId">@orderItem.ProductName</a>
+                    </td>
+
+                    <td>@orderItem.Quantity</td>
+                    <td>@(orderItem.Price * orderItem.Quantity)</td>
+                    <td>
+                        <a class="btn btn-danger btn-block"
+                           asp-action="remove"
+                           asp-controller="cart"
+                           asp-route-productId="@orderItem.ProductId">کاهش</a>
+                    </td>
+                </tr>
+            }
+    </tbody>
+</table>
+
+<div>
+    <p>
+        کل مبلغ پرداختی : @Model.TotalPrice
+        <a class="btn btn-primary float-right"
+           asp-action="Payment"
+           asp-controller="cart"
+           asp-area="" >پرداخت</a>
+    </p>
+</div>

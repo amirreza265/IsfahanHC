@@ -1,0 +1,13 @@
+﻿@model IEnumerable<ShowProductViewModel>
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div>
+    <h1>به فروشگاه ما خوش آمدید</h1>
+    <div class="row container-fluid">
+    @foreach (var product in Model)
+    {
+        <partial name="_ShowProduct" model="product" />
+    }
+</div>
+</div>

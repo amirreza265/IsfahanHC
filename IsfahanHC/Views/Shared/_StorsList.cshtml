@@ -1,0 +1,14 @@
+﻿@inject IStorRepository _stors
+@{ 
+    var stors = await _stors.GetStorsAsync();
+}
+
+<ul class="list-group">
+    @foreach (var item in stors)
+    {
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            @item.Name
+            <span class="badge badge-primary badge-pill">@item.ProductsCount</span>
+        </li>
+    }
+</ul>

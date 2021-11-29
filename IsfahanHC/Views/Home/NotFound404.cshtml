@@ -1,0 +1,26 @@
+﻿@model int
+@{
+    ViewData["Title"] = "NotFound";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Meta
+{
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+}
+
+@section Stylesheet
+{
+    <link href="~/css/Eror404Style.css" rel="stylesheet" />
+}
+
+
+<div id="notfound" class="bg-transparent">
+    <div class="notfound">
+        <div class="notfound-404 align-text-bottom">
+            <h1 class="text-light text-center">@Model</h1>
+            <h2 class="text-black-50">خطا با کد وضعیت : @Model</h2>
+        </div>
+        <a href="javascript:history.back()">بازگشت</a>
+    </div>
+</div>

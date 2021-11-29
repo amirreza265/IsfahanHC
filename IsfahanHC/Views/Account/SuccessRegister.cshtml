@@ -1,0 +1,15 @@
+﻿@model RegisterViewModel
+@{
+    ViewData["Title"] = "ثبت نام موفق";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>ثبت نام موفق</h1>
+<hr />
+<div class="alert alert-success">
+    کار بر محترم با ایمیل "@Model.Email"
+    ثبت نام شما با موفقیت انجام شد از طریق لینک زیر میتوانید وارد سایت شوید.
+    <p>
+        <a class="alert-link" asp-action="Login" asp-controller="Account">ورود</a>
+    </p>
+</div>

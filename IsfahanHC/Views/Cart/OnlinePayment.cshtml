@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewData["Title"] = "OnlinePayment";
+}
+
+<h1>پرداخت فاکتور</h1>
+
+@if (ViewBag.status == 100)
+{
+<p class="alert alert-success">
+    @ViewBag.message  :
+    شماره پیگیری شما : @ViewBag.code  |
+    <span class="alert-link">
+        <a asp-action="index"
+           asp-controller="home"
+           asp-area=""> صفحه اصلی</a>
+    </span>
+</p>
+}
+else
+{
+<p class="alert alert-danger">
+    @ViewBag.message
+    <span class="alert-link">
+        <a asp-action="index"
+           asp-controller="home"
+           asp-area=""> صفحه اصلی</a>
+    </span>
+</p>
+}

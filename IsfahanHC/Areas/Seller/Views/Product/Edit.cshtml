@@ -1,0 +1,83 @@
+﻿@model IsfahanHC.Models.ViewModels.Product.EditProductViewModel
+
+@{
+    ViewData["Title"] = "Etid";
+    Layout = "~/Areas/Seller/Views/Shared/_Layout.cshtml";
+    string price = 0.ToString();
+    decimal p = Model.Price;
+    if (p > 0)
+    {
+        price = p.ToString();
+        price = price.Substring(0, price.IndexOf("/"));
+    }
+}
+<h4>ویرایش محصول</h4>
+<hr />
+<div class="row col-12">
+    <div class="col-md-12">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Images" class="form-control" value="@Model.Images" type="hidden" />
+                <input asp-for="ProductId" type="hidden" value="@Model.ProductId" />
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <textarea asp-for="Description" class="form-control" ></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="QuantityInStock" class="control-label"></label>
+                <input asp-for="QuantityInStock" class="form-control" />
+                <span asp-validation-for="QuantityInStock" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" value="@price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="ذخیره" class="btn btn-primary btn-block" />
+            </div>
+        </form>
+        <form class="border-secondary"
+              asp-action="AddImage" enctype="multipart/form-data" method="post">
+            <div class="form-group col-12">
+                <input asp-for="ProductId" type="hidden" value="@Model.ProductId" />
+                <div class="row">
+                    @foreach (var image in Model.Images)
+                    {
+                        <div class="col-md-6 col-lg-4 col-sm-12 border-dark" style="border: solid; padding:4px;">
+                            <img class="img-fluid img-thumbnail card-img-top"
+                                 src="~/img/Products/p@(Model.ProductId)/@image.FileName" />
+                            <br />
+                            <a class="btn btn-outline-danger btn-block"
+                               asp-action="RemoveImage"
+                               asp-route-imageId="@image.ImageId">حذف</a>
+                        </div>
+                    }
+                </div>
+                <br />
+                <input asp-for="UploadImages" multiple class="form-control" />
+                <span asp-validation-for="UploadImages" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="ارسال عکس" class="btn btn-primary" />
+            </div>
+        </form>
+        <hr />
+        <div>
+            <a class="btn btn-outline-primary"
+               asp-area="seller"
+               asp-action="index"
+               asp-controller="home">بازگشت به صفحه مدیریت</a>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

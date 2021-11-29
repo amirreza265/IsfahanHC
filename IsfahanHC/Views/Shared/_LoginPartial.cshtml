@@ -1,0 +1,51 @@
+﻿@using System.Security.Principal
+
+<ul class="navbar-nav ml-auto">
+@if (User.Identity.IsAuthenticated)
+{
+    <li class="nav-item">
+        <!-- Example single danger button -->
+        <div class="btn-group">
+            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                @User.Identity.Name
+            </button>
+            <div class="dropdown-menu">
+                @*drop dwoun items*@
+                @if (bool.Parse(User.FindFirstValue("IsAdmin")))
+                {
+                    <a asp-area="Admin"
+                       asp-action="index"
+                       asp-controller="home"
+                       class="dropdown-item text-dark">مدیریت وب سایت</a>
+                }
+                @if (bool.Parse(User.FindFirstValue("IsSeller")))
+                {
+                    <a asp-area="Seller"
+                       asp-controller="Home"
+                       asp-action="Index"
+                       class="dropdown-item text-dark">مدیریت فروشگاه</a>
+                }
+                <a asp-area="user"
+                   asp-controller="home"
+                   asp-action="index"
+                   class="dropdown-item text-dark">حساب کاربری</a>
+                <a asp-area=""
+                   asp-controller="Cart"
+                   asp-action="Current"
+                   class="dropdown-item text-dark">سبد خرید</a>
+                <div class="dropdown-divider"></div>
+                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="logout">خروج</a>
+            </div>
+        </div>
+    </li>
+}
+else
+{
+        <li class="nav-item">
+            <a class="nav-link text-white-50" asp-controller="Account" asp-action="login">ورود</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white-50" asp-controller="Account" asp-action="register">ثبت نام</a>
+        </li>
+}
+</ul>

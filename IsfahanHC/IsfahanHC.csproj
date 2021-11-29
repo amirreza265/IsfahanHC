@@ -1,0 +1,78 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>aspnet-IsfahanHC-39D0A762-2906-4E77-ADAD-F37FB35A914D</UserSecretsId>
+    <WebProject_DirectoryAccessLevelKey>0</WebProject_DirectoryAccessLevelKey>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20210603082543_Initdatabase.cs" />
+    <Compile Remove="Migrations\20210603082543_Initdatabase.Designer.cs" />
+    <Compile Remove="Migrations\20210603083515_Initdatabase.cs" />
+    <Compile Remove="Migrations\20210603083515_Initdatabase.Designer.cs" />
+    <Compile Remove="Migrations\20210603083916_Initdatabase.cs" />
+    <Compile Remove="Migrations\20210603083916_Initdatabase.Designer.cs" />
+    <Compile Remove="Migrations\20210603084709_changeuserdltTime.cs" />
+    <Compile Remove="Migrations\20210603084709_changeuserdltTime.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\lib\bootstrap-4.5.2-dist-rtl\css\bootstrap-grid.css.map" />
+    <None Include="wwwroot\lib\bootstrap-4.5.2-dist-rtl\css\bootstrap-grid.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap-4.5.2-dist-rtl\css\bootstrap-reboot.css.map" />
+    <None Include="wwwroot\lib\bootstrap-4.5.2-dist-rtl\css\bootstrap-reboot.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap-4.5.2-dist-rtl\css\bootstrap.css.map" />
+    <None Include="wwwroot\lib\bootstrap-4.5.2-dist-rtl\css\bootstrap.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap-4.5.2-dist-rtl\js\bootstrap.bundle.js" />
+    <None Include="wwwroot\lib\bootstrap-4.5.2-dist-rtl\js\bootstrap.bundle.js.map" />
+    <None Include="wwwroot\lib\bootstrap-4.5.2-dist-rtl\js\bootstrap.bundle.min.js" />
+    <None Include="wwwroot\lib\bootstrap-4.5.2-dist-rtl\js\bootstrap.bundle.min.js.map" />
+    <None Include="wwwroot\lib\bootstrap-4.5.2-dist-rtl\js\bootstrap.js" />
+    <None Include="wwwroot\lib\bootstrap-4.5.2-dist-rtl\js\bootstrap.js.map" />
+    <None Include="wwwroot\lib\bootstrap-4.5.2-dist-rtl\js\bootstrap.min.js" />
+    <None Include="wwwroot\lib\bootstrap-4.5.2-dist-rtl\js\bootstrap.min.js.map" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.AzureAD.UI" Version="3.1.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.15">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.15">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+    <PackageReference Include="ZarinpalSandbox" Version="2.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Seller\Data\" />
+    <Folder Include="Areas\Seller\Models\ViewModel\" />
+    <Folder Include="Areas\User\Data\" />
+    <Folder Include="Areas\User\Models\" />
+    <Folder Include="Components\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Views\Shared\" />
+    <Folder Include="wwwroot\images\" />
+    <Folder Include="wwwroot\img\Products\p2\" />
+    <Folder Include="wwwroot\img\Stors\" />
+    <Folder Include="wwwroot\img\Products\p1\" />
+    <Folder Include="wwwroot\js\" />
+    <Folder Include="wwwroot\lib\bootstrap\" />
+    <Folder Include="wwwroot\lib\bootstrap\dist\css\" />
+    <Folder Include="wwwroot\lib\bootstrap\dist\js\" />
+    <Folder Include="wwwroot\lib\jquery-validation-unobtrusive\" />
+    <Folder Include="wwwroot\lib\jquery-validation\" />
+    <Folder Include="wwwroot\lib\jquery-validation\dist\" />
+    <Folder Include="wwwroot\lib\jquery\" />
+    <Folder Include="wwwroot\lib\jquery\dist\" />
+  </ItemGroup>
+
+</Project>

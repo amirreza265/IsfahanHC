@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <title>Documentation - MyShop HTML Template</title>
+      <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+      <link rel="stylesheet" type="text/css" href="assets/css/jasny-bootstrap.css">
+      <link rel="stylesheet" type="text/css" href="assets/css/doc.css">
+      <link rel="stylesheet" type="text/css" href="assets/css/shDocumenter.css">
+      <link rel="stylesheet" href="fonts/flaticon/flaticon.css">
+      <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace" rel="stylesheet">
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
+   </head>
+   <body>
+      <header id="header">
+         <div class="container-full">
+            <div class="row">
+               <div class="col-sm-2 visible-xs">
+                  <div class="navbar-mobile navbar-default">
+                     <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-recalc="false" data-target=".navmenu" data-canvas=".canvas"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                  </div>
+               </div>
+               <div class="col-sm-3 col-lg-3">
+                  <div id="logo"> <span><a href="#"><img src="images/logo.png"  alt="" class="img-responsive" /></a></span> </div>
+               </div>
+               <div class="col-sm-4 col-lg-5">
+                  <div id="slogan"> <span>Documentation for <span class="color">MyShop HTML Template</span></span> </div>
+               </div>
+               <div class="col-sm-5 col-lg-4">
+                  <ul class="notifications">
+                     <li> <a href="https://twitter.com/tonytemplates" class="dropdown-toggle"> <span class="icon flaticon-social19"></span><span class="n-text">Twitter</span> </a> </li>
+                     <li> <a href="https://www.facebook.com/Tonytemplates" class="dropdown-toggle"> <span class="icon flaticon-facebook12"></span><span class="n-text">Facebook</span> </a> </li>
+                     <li> <a href="http://support.ethemeuk.com/" class="dropdown-toggle"> <span class="icon flaticon-shopping155"></span><span class="n-text">Support</span> </a> </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </header>
+      <div class="canvas">
+         <div id="content">
+            <div class="navmenu navmenu-default navmenu-fixed-left offcanvas-xs" id="navmenu">
+               <ul class="nav navmenu-nav">
+                  <li><a href="#documenter_cover"><span class="icon icon-lg flaticon-add139"></span>Getting Started</a></li>
+                  <li><a href="#folder_structure"><span class="icon icon-lg  flaticon-add139"></span>Folder Structure</a></li>
+                  <li><a href="#html_structure"><span class="icon icon-lg  flaticon-add139"></span>HTML Structure</a></li>
+                  <li><a href="#css_files_and_structure"><span class="icon icon-lg  flaticon-add139"></span>CSS Files and Structure</a></li>
+                  <li><a href="#less"><span class="icon icon-lg  flaticon-add139"></span>SCSS Files and Structure</a></li>
+                  <li><a href="#javascript"><span class="icon icon-lg  flaticon-add139"></span>JavaScript</a></li>
+                  <li><a href="#RTL"><span class="icon icon-lg  flaticon-add139"></span>RTL Mode</a></li>
+                  <li><a href="#logo_use"><span class="icon icon-lg  flaticon-add139"></span>Logo</a></li>
+                  <li><a href="#icons"><span class="icon icon-lg  flaticon-add139"></span>Icons</a></li>
+                  <li><a href="#product_item"><span class="icon icon-lg  flaticon-add139"></span>Product items in pages content</a></li>
+                  <li><a href="#fonts"><span class="icon icon-lg  flaticon-add139"></span>Fonts</a></li>
+                  <li><a href="#psd_files"><span class="icon icon-lg  flaticon-add139"></span>PSD Files</a></li>
+                  <li><a href="#sources_and_credits"><span class="icon icon-lg  flaticon-add139"></span>Sources and Credits</a></li>
+                  <li><a href="#gallery_settings"><span class="icon icon-lg  flaticon-add139"></span>Gallery settings</a></li>
+                  <li><a href="#blog_settings"><span class="icon icon-lg  flaticon-add139"></span>Blog settings</a></li>
+                  <li><a href="#banner_settings"><span class="icon icon-lg  flaticon-add139"></span>Banner settings</a></li>
+                  <li><a href="#product_pages"><span class="icon icon-lg  flaticon-add139"></span>Product pages</a></li>
+                  <li><a href="#newsletter_popup"><span class="icon icon-lg  flaticon-add139"></span>Newsletter popup</a></li>
+                  <li><a href="#header_menu"><span class="icon icon-lg  flaticon-add139"></span>Menu settings</a></li>
+                  <li><a href="#simple_menu"><span class="icon icon-lg  flaticon-add139"></span>Simple menu</a></li>
+                  <li><a href="#editing_banner"><span class="icon icon-lg  flaticon-add139"></span>Editing the banner<br>(full width viewport)</a></li>
+                  <li><a href="#embed_video"><span class="icon icon-lg  flaticon-add139"></span>Embed video on the site</a></li>
+                  <li><a href="#embed_video_product"><span class="icon icon-lg  flaticon-add139"></span>Embedding video on product pages for product</a></li>
+                  <li><a href="#hover_product"><span class="icon icon-lg  flaticon-add139"></span>Cancel the hover on the product</a></li>
+                  <li><a href="#main_setup"><span class="icon icon-lg  flaticon-add139"></span>Mail setup - contact.html</a></li>
+               </ul>
+            </div>
+            <div id="page-content">
+               <section class="chapter" id="documenter_cover">
+                  <h1>MyShop HTML</h1>
+                  <h2>Premium HTML 5 website</h2>
+                  <ul>
+                     <li>Created: January 2017.</li>
+                     <li>By: themetony - Envato author <a href="http://themeforest.net/user/themetony"> Profile </a></li>
+                  </ul>
+                  <p>Thank you for purchasing our template. If you have any questions that are beyond the scope of this help file, please feel free to email us via our support forum <a href="http://support.ethemeuk.com/">http://support.ethemeuk.com/</a>. Thank you very much! <br>
+                     <br>
+                     <strong>MyShop HTML</strong> is Html5 + CSS3 Website template and works fine in all major browsers and IE from version 9. It's powered by jQuery and you'll find nice and discreet interactivity.  The code is clearly written and you will find comments for each considerable parts. <br>
+                     <br>
+                     Lets take a closer look at the structure of Html, Css, JavaScript.
+                  </p>
+               </section>
+               <section class="chapter" id="folder_structure">
+                  <h3>Folder Structure</h3>
+                  <p>When you unpack downloaded archive from ThemeForest.net you'll get folder containing 3 folders.</p>
+                  <p>Here they are, sorted alphabetically:</p>
+                  <ol>
+                     <li><strong>Documentation</strong> - Documentation for MyShop HTML site template</li>
+                     <li><strong>HTML</strong> - Main folder for template</li>
+                     <li><strong>PSD</strong> - Design source files</li>
+                  </ol>
+                  <h4>HTML folder structure:</h4>
+                  <ul>
+                     <li>
+                        <strong>/HTML</strong>
+                        <ul>
+                           <li><strong>/css</strong> (Template CSS and SCSS)</li>
+                           <li><strong>/external</strong> (Template js)</li>
+                           <li><strong>/font</strong> (Font Font Awesome, MaterialIcons, fontello)</li>
+                           <li><strong>/js</strong> (Template initialization js)</li>
+                           <li>
+                              <strong>/images</strong> (All Images)
+                              <ul>
+                                 <li><strong>/blog</strong> (Blog Images)</li>
+                                 <li><strong>/collection</strong> (Collection Images)</li>
+                                 <li><strong>/gallery</strong> (Gallery Images)</li>
+                                 <li><strong>/product</strong> (Product Images)</li>
+                                 <li><strong>/lookbook</strong> (Lookbook Images)</li>
+                                 <li><strong>/slides</strong> (Slides Images)</li>
+                                 <li><strong>/slides/video</strong> (Slides video)</li>
+                                 <li><strong>/custom</strong> (Images)</li>
+                              </ul>
+                           </li>
+                        </ul>
+                     </li>
+                  </ul>
+                  <h4>CONTENT </h4>
+                  <p>Content divided on pages:</p>
+                  <ul class="marked-list">
+                     <li>index.html - <strong>Home page</strong></li>
+                     <li>index-02.html, index-03.html, index-04.html, index-05.html, index-06.html, index-07.html, index-08.html, index-09.html, index-10.html, index-11.html, index-12.html - <strong>Different layouts  page</strong></li>
+                     <li>listing-left-column.html, listing-left-column-without-block.html, listing-left-right-column.html, listing-right-column.html, listing-without-columns.html, listing-without-columns-items2.html, listing-without-columns-items3.html, listing-without-columns-items4.html, listing-without-columns-items6.html - <strong>Product listing pages</strong></li>
+                     <li>product.html, product-02.html, product-03.html, product-04.html <strong> -  Product info pages</strong></li>
+                     <li>blog_listing.html, blog_grid_col_2.html, blog_grid_col_3, blog_masonry_col_2.html, blog_masonry_col_3.html, blog_single_post.html, blog_single_post_01.html, - <strong>Blog content pages</strong></li>
+                     <li>gallery_grid_col_2.html, gallery_grid_col_3.html, gallery_masonry_col_2.html, gallery_masonry_col_3.html,  - <strong> Gallery pages</strong></li>
+                     <li>checkout.html - <strong>Checkout page</strong></li>
+                     <li>compare.html - <strong>Products compare page</strong></li>
+                     <li>shopping_cart_01.html, shopping_cart_02.html - <strong>Shopping Cart page</strong></li>
+                     <li>account.html, account-address.html, account-order.html - <strong>Account page</strong></li>
+                     <li>page-404.html - <strong>Not found page</strong></li>
+                     <li>page-empty-category.html - <strong>Empty category</strong></li>
+                     <li>page-empty-search.html - <strong>Empty search</strong></li>
+                     <li>page-empty-shopping-cart.html - <strong>Empty shopping cart</strong></li>
+                     <li>typography.html -<strong> Typography page</strong></li>
+                     <li>login-form.html - <strong>Logination page</strong></li>
+                     <li>faqs.html - <strong>FAQ page</strong></li>
+                     <li>contact.html - <strong>Contact form </strong>
+                     <li>contact_01.html - <strong>Contact form </strong>
+                     <li>about.html, about_01.html, look-book.html, comming-soon.html, collections.html -  <strong>Other content page</strong></li>
+                     <li>index-simple-menu.html -<strong> Example of simple menu implementation</strong></li>
+                     <li>index-rtl.html -<strong> RTL mode example</strong></li>
+                  </ul>
+               </section>
+               <section class="chapter" id="html_structure">
+                  <h3>HTML Structure</h3>
+
+                  <h4>Grid:</h4>
+                  <p>Based on Bootstrap, a sleek, intuitive, and powerful front-end framework.</p>
+                  <p>Bootstrap makes use of certain HTML elements and CSS properties that require the use of the HTML5 doctype. Include it at the beginning of all your projects.</p>
+                  <pre class="brush: html">
+    &lt;!DOCTYPE html&gt;
+        &lt;html lang="en"&gt;
+            ...
+        &lt;/html&gt;</pre>
+                  <p>The default Bootstrap grid system utilizes 12 columns.</p>
+                  <p>For a simple two column layout, create a <code>.row</code> and add the appropriate number of <code>.col-lg-*</code> columns. As this is a 12-column grid, each <code>.col-lg-*</code> spans a number of those 12 columns, and should always add up to 12 for each row (or the number of columns in the parent).</p>
+                  <pre class="brush: html">
+    &lt;div class="row"&gt;
+        &lt;div class="col-lg-4"&gt;...&lt;/div&gt;
+        &lt;div class="col-lg-8"&gt;...&lt;/div&gt;
+    &lt;/div&gt;</pre>
+                  <p>Given this example, we have .col-lg-4 and .col-lg-8, making for 12 total columns and a complete row.</p>
+                  <p>Move columns to the right using <code>.col-lg-offset-*</code> classes. Each class increases the left margin of a column by a whole column. For example, <code>.col-lg-offset-4</code> moves <code>.col-lg-4</code> over four columns.</p>
+                  <pre class="brush: html">
+    &lt;div class="row"&gt;
+            &lt;div class="col-lg-4"&gt;...&lt;/div&gt;
+            &lt;div class="col-lg-4 col-lg-offset-2"&gt;...&lt;/div&gt;
+        &lt;/div&gt;</pre>
+                  <br>
+                  <p>If you need more information, please visit this site: http://getbootstrap.com/css/#grid</p>
+               </section>
+               <section class="chapter" id="css_files_and_structure">
+                  <h3>CSS Files</h3>
+                  <p>All css files located at <strong>css</strong> folder.</p>
+                  <ul>
+                     <li><strong>template.css</strong> - Theme main CSS file.</li>
+                     <li><strong>template-rtl.css</strong> - RTL mode CSS</li>
+                  </ul>
+               </section>
+               <section class="chapter" id="less">
+                  <h3>SCSS Files</h3>
+                  <p>All SCSS files located at <strong>css</strong> folder.</p>
+                  <ul>
+                     <li><strong>template.scss</strong> - Theme main scss file.</li>
+                     <li><strong>template-rtl.scss</strong> - RTL mode scss</li>
+                  </ul>
+               </section>
+               <section class="chapter" id="javascript">
+                  <h3>JavaScript</h3>
+                  <p>All JS files located at <strong>js</strong> folder and <strong>external</strong>.</p>
+                  <ul>
+                     <li><strong>main.js</strong> - Template main JS file.</li>
+                     <li>vendor plugins JS files</li>
+                  </ul>
+                  <h4>Changing Plugins Options</h4>
+                  <p>You can change plugins options  in the file js/custom.js.</p>
+                  <p>For example, you can change any carousel options:</p>
+                  <pre class="brush: html">
+         $(document).ready(function() {
+            setSlickGallery($('.slick-slider-content'),1,1,1,1,1,'slickSlider');
+         });
+</pre>
+
+
+                  <p>and other. </p>
+                  <p>If you need more information, please visit plugins official sites.</p>
+               </section>
+               <section class="chapter" id="RTL">
+                  <h3>RTL Mode</h3>
+                  <p>        1.  Add the MyShop RTL version CSS after the default MyShop CSS file in the HTML: </p>
+                  <!-- Custom styles for this template -->
+                  <pre class="brush: html">
+  <link href="css/template.css" rel="stylesheet">
+  <link href="css/template-rtl.css" rel="stylesheet">
+</pre>
+                  <br>
+                  <p>        2.  Add the mm-right class to .panel-menu in the HTML: </p>
+                  <!-- Custom styles for this template -->
+                  <pre class="brush: html">
+  &lt;nav class="panel-menu mm-right"&gt;
+    ...
+  &lt;/nav&gt;
+</pre>
+               </section>
+              <section class="chapter" id="logo_use">
+                  <h3>Logo</h3>
+                  <p> The ability to use text instead of pictures. It is necessary to replace a piece of code:</p>
+                  <pre class="brush: html">
+                     <!-- logo -->
+                     <div class="logo">
+                        <a href="index.html"><img src="images/logo.png" alt=""/></a>
+                     </div>
+                     <!-- /logo -->
+                  </pre>
+                  <br>
+                  <pre class="brush: html">
+                     <!-- logo -->
+                     <div class="logo">
+                        <h2><a href="index.html">MyShop</a></h2>
+                     </div>
+                     <!-- /logo -->
+                  </pre>
+                  <br>
+                  <p>Can be changed in such blocks: mobile-header, desktop-header, footer. It is only necessary to replace:</p>
+                   <pre class="brush: html">
+                    <a href="index.html"><img src="images/logo.png" alt=""/></a>
+                  </pre>
+                  on:
+                  <br>
+                  <pre class="brush: html">
+                     <h2><a href="index.html">MyShop</a></h2>
+                  </pre>
+
+               </section>
+               <section class="chapter" id="icons">
+                  <h3>Icons</h3>
+                  <p>You can see all demo icons in file infographic.html</p>
+                  <pre class="brush: html">
+          ...
+          &lt;i class="icon icon-person">&lt;/i&gt;
+            ...
+        </pre>
+                  or
+                  <pre class="brush: html">
+          ...
+          &lt;span class="icon icon-shopping_basket">&lt;/span&gt;
+            ...
+        </pre>
+                  <br>
+               </section>
+               <section class="chapter" id="product_item">
+                  <h3>Product items in pages content</h3>
+                  <p>You have the ability to make a fixed height product. If you want to do something:</p>
+                  <p>1)Find file "main.js"(js/main.js) and in it to find variable "same_product_height". In the variable, change the value to "true".</p>
+                  <p>
+                     2)Find file "template.scss"(css/template.scss) and in it to find a piece of code:
+                  </p>
+                  <pre class="brush: html">
+                  #same_product_height{
+                     #pageContent{
+                        .product-listing:not(.row-view){
+                           .product{
+                              .image-box{
+                                 height: 200px;
+                                 overflow: hidden;
+                                 display: -ms-flexbox;
+                                 display: -webkit-flex;
+                                 display: flex;
+                                 -webkit-flex-direction: row;
+                                 -ms-flex-direction: row;
+                                 flex-direction: row;
+                                 -webkit-flex-wrap: nowrap;
+                                 -ms-flex-wrap: nowrap;
+                                 flex-wrap: nowrap;
+                                 -webkit-justify-content: center;
+                                 -ms-flex-pack: center;
+                                 justify-content: center;
+                                 -webkit-align-content: stretch;
+                                 -ms-flex-line-pack: stretch;
+                                 align-content: stretch;
+                                 -webkit-align-items: center;
+                                 -ms-flex-align: center;
+                                 align-items: center;
+                                 img{
+                                    max-height: 200px;
+                                    width:auto;
+                                    max-width: 100%;
+                                    display: inline-block;
+                                 }
+                              }
+                           }
+                        }
+                     }
+                  }
+                 </pre>
+                 <p>* Here it is necessary to change the value "200px" twice for the required height</p>
+               </section>
+               <section class="chapter" id="fonts">
+                  <h3>Fonts</h3>
+                  To change the custom font, please take a look in the css/template.scss. Find in the top:
+                  <pre class="brush: css">
+                    @import url('https://fonts.googleapis.com/css?family=Covered+By+Your+Grace|Poppins:300,400,500,600,700');
+                  </pre>
+                  To change fonts, go to http://www.google.com/webfonts, choose new fonts and use the generated code.
+               </section>
+               <section class="chapter" id="psd_files">
+                  <h3>PSD Files</h3>
+                  <p>Design source files located at <strong>PSD</strong> folder.</p>
+               </section>
+               <section class="chapter" id="sources_and_credits">
+                  <h3>Sources and Credits</h3>
+                  <p>We have used the following  files as listed.</p>
+                  <ul class="marked-list">
+                     <li><a href="http://jquery.com/">jQuery</a> - JavaScript Library</li>
+                     <li><a href="http://getbootstrap.com/">Bootstrap and bootstrap-datepicker</a> - Bootstrap by Twitter</li>
+                     <li><a href="http://codecanyon.net/item/slider-revolution-responsive-jquery-plugin/2580848">Revolution Slider</a> - already included into template</li>
+                     <li><a href="http://kenwheeler.github.io/slick/">Slick</a> - jQuery carousel plugin</li>
+                     <li><a href="http://isotope.metafizzy.co/"> Isotope </a>- jQuery plugin filter &amp; sort  plugin</li>
+                     <li><a href="http://masonry.desandro.com/"> Masonry </a>- Masonry cascading grid layout library</li>
+                     <li><a href=" https://plugins.jquery.com/mousewheel/"> Mousewheel </a>- Mousewheel a jQuery plugin that adds cross-browser mouse wheel support.</li>
+                     <li><a href="http://keith-wood.name/countdown.html">jQuery Countdown</a> - jQuery Countdown plugin</li>
+                     <li><a href="http://dimsemenov.com/plugins/magnific-popup/">Magnific Popup</a> - jQuery popup plugin</li>
+                     <li><a href="http://refreshless.com/nouislider/">noUiSlider</a> - jQuery Range Slider</li>
+                     <li><a href="www.elevateweb.co.uk/image-zoom">jQuery elevateZoom</a> - jQuery imagezoom pluginr</li>
+                     <li><a href="https://jqueryvalidation.org/#jquery-validation-plugin">jQuery Validation Plugin form</a> - form validation (contact.html)</li>
+                  </ul>
+                  <hr />
+                  <p>Once again, thank you for purchasing this template. As mentioned at the beginning of this documentation, we would be glad to help you if you have any questions related to this template. For more general question related to this template on ThemeForest, you might consider visiting the forums and asking your question in the &quot;Item Discussion&quot; section.</p>
+                  <p>If you are satisfied with &quot;MyShop HTML - site template&quot; please go to your downloads section on ThemeForest.net and rate MyShop HTML with 5 stars. Otherwise, <a href="http://themeforest.net/user/themetony">send an Email</a> and I will try to find nice and easy solution for you :)</p>
+                  <p>Hope that you will enjoy in MyShop HTML as much as I've enjoyed designing this template.</p>
+                  <p>Kind Regards,<br>
+                     <strong>themetony</strong>
+                  </p>
+               </section>
+               <section class="chapter" id="gallery_settings">
+                  <h3>Gallery settings</h3>
+                  <p>Hover effects, add the effect-1 or effect-2 class to .gallery-content in the HTML: </p>
+                  <h4>Gallery grid col</h4>
+                  <!-- Custom styles for this template -->
+                  <pre class="brush: html">
+                    &lt;div class="gallery-content row effect-1"&gt;
+                      ...
+                    &lt;/div&gt;
+                  </pre>
+                  <br>
+                  <pre class="brush: html">
+                    &lt;div class="gallery-content row effect-2"&gt;
+                      ...
+                    &lt;/div&gt;
+                  </pre>
+                  <br>
+                  <pre class="brush: html">
+                    &lt;div class="gallery-content  row"&gt;
+                      ...
+                    &lt;/div&gt;
+                  </pre>
+                  <h4>Gallery masonry col</h4>
+                  <!-- Custom styles for this template -->
+                  <pre class="brush: html">
+                    &lt;div class="grid-gallery-masonry effect-1 gallery-content grid-gallery-masonry-col-2"&gt;
+                      ...
+                    &lt;/div&gt;
+                  </pre>
+                  <br>
+                  <pre class="brush: html">
+                    &lt;div class="grid-gallery-masonry effect-2 gallery-content grid-gallery-masonry-col-2"&gt;
+                      ...
+                    &lt;/div&gt;
+                  </pre>
+                  <br>
+                  <pre class="brush: html">
+                    &lt;div class="grid-gallery-masonry gallery-content grid-gallery-masonry-col-2"&gt;
+                      ...
+                    &lt;/div&gt;
+                  </pre>
+               </section>
+               <section class="chapter" id="blog_settings">
+                  <h3>Blog settings</h3>
+                  <p>Loading Effects for masonry Items (blog_masonry_col_2.html, blog_masonry_col_3.html), add the effect-1, effect-2, effect-3, effect-4, effect-5, effect-6, effect-7, effect-8 class to .blog-masonry in the HTML:</p>
+                  <!-- Custom styles for this template -->
+                  <pre class="brush: html">
+                    &lt;div class="effect-1 blog-masonry"&gt;
+                      ...
+                    &lt;/div&gt;
+                  </pre>
+                  <br>
+                                    <pre class="brush: html">
+                    &lt;div class="effect-2 blog-masonry"&gt;
+                      ...
+                    &lt;/div&gt;
+                  </pre>
+                  <br>
+                                <pre class="brush: html">
+                    &lt;div class="effect-3 blog-masonry"&gt;
+                      ...
+                    &lt;/div&gt;
+                  </pre>
+                  <br>
+                                <pre class="brush: html">
+                    &lt;div class="effect-4 blog-masonry"&gt;
+                      ...
+                    &lt;/div&gt;
+                  </pre>
+                  <br>
+                                <pre class="brush: html">
+                    &lt;div class="effect-5 blog-masonry"&gt;
+                      ...
+                    &lt;/div&gt;
+                  </pre>
+                  <br>
+                                <pre class="brush: html">
+                    &lt;div class="effect-6 blog-masonry"&gt;
+                      ...
+                    &lt;/div&gt;
+                  </pre>
+                  <br>
+                                <pre class="brush: html">
+                    &lt;div class="effect-7 blog-masonry"&gt;
+                      ...
+                    &lt;/div&gt;
+                  </pre>
+                  <br>
+                                <pre class="brush: html">
+                    &lt;div class="effect-8 blog-masonry"&gt;
+                      ...
+                    &lt;/div&gt;
+                  </pre>
+                  <br>           </section>
+               <section class="chapter" id="banner_settings">
+                  <h3>Banner settings</h3>
+                  <p>
+                     Html block contains a promo-box class. It contains the default settings, and 14 unique designs
+                  </p>
+                  <h4>Connection the default settings</h4>
+                  <p>add the design-default class to .promo-box in the HTML: </p>
+                  <pre class="brush: html">
+                    &lt;div class="promo-box zoom-in design-default"&gt;
+                      ...
+                    &lt;/div&gt;
+                  </pre>
+                  <h4>Connection the 14 unique designs</h4>
+                  <p>add the design-01, design-02, design-03, design-04, design-05, design-06, design-07, design-08, design-09, design-10, design-11, design-12, design-13, design-14 class to .promo-box in the HTML: </p>
+                  <pre class="brush: html">
+                    &lt;div class="promo-box zoom-in design-01"&gt;
+                      ...
+                    &lt;/div&gt;
+                  </pre>
+                  <h4>General settings</h4>
+                  <p>
+                     * You can remove the zoom-in with the picture when removing class hover zoom-in
+                  </p>
+                  <p>* The default color is white content, that would change the need to add classes: </p>
+                  <ul>
+                     <li>.color-defaulttext</li>
+                     <li>.color-defaulttext2</li>
+                     <li>.color-base</li>
+                  </ul>
+                  <pre class="brush: html">
+                    &lt;div class="title color-defaulttext2"&gt;
+                      ...
+                    &lt;/div&gt;
+                  </pre><br>
+                  <p>
+                     * By default all the center and positioning of content can be changed with the addition of classes:
+                  </p>
+                  <ul>
+                     <li>.point-top</li>
+                     <li>.point-center</li>
+                     <li>.point-bottom</li>
+                     <li>.point-left</li>
+                     <li>.point-right</li>
+                     <li>.point-point-center-horizontal</li>
+                     <li>.point-point-center-vertical</li>
+                  </ul>
+                  <p>You can use the dual class:</p>
+                  <ul>
+                     <li>.point-center-vertical and .point-left</li>
+                  </ul>
+                  <pre class="brush: html">
+                    &lt;div class="description point-center-vertical point-left left-offset text-center"&gt;
+                      ...
+                    &lt;/div&gt;
+                  </pre><br>
+               </section>
+                <section class="chapter" id="product_pages">
+                  <h3>Product pages</h3>
+                    * add class no-zoom - remove the zoom:<br><br>
+                        <p>
+                          - product.html:
+                           <pre class="brush: html">
+                             &lt;div class="product-main-image no-zoom"&gt;
+                               ...
+                             &lt;/div&gt;
+                           </pre>
+                        </p>
+                        <p>
+                          - product-02.html:
+                           <pre class="brush: html">
+                             &lt;div class="product-main-image no-zoom"&gt;
+                               ...
+                             &lt;/div&gt;
+                           </pre>
+                        </p>
+                        <p>
+                          - product-03.html:
+                           <pre class="brush: html">
+                             &lt;div class="bigGallery box-baners no-zoom"&gt;
+                               ...
+                             &lt;/div&gt;
+                           </pre>
+                        </p>
+                        <p>
+                          - product-05.html:
+                           <pre class="brush: html">
+                             &lt;ul  data-scrollzoom="false" class="no-zoom"&gt;
+                               ...
+                             &lt;/div&gt;
+                           </pre>
+
+                        </p>
+                        <p>
+                           * data-scrollzoom="false" - zoom control with the mouse wheel
+                           <pre class="brush: html">
+                             &lt;div class="bigGallery box-baners" data-scrollzoom="false"&gt;
+                               ...
+                             &lt;/div&gt;
+                           </pre>
+                        </p>
+                  <br>
+               </section>
+                <section class="chapter" id="newsletter_popup">
+                  <h3>Newsletter popup</h3>
+                    * in js/main.js, add script
+                      <pre class="brush: html">
+/*!
+ * jQuery Cookie Plugin v1.4.1
+ * https://github.com/carhartl/jquery-cookie
+ *
+ * Copyright 2006, 2014 Klaus Hartl
+ * Released under the MIT license
+ */
+(function (factory) {
+  if (typeof define === 'function' && define.amd) {
+    define(['jquery'], factory);
+  } else if (typeof exports === 'object') {
+    module.exports = factory(require('jquery'));
+  } else {
+    factory(jQuery);
+  }
+}(function ($) {
+
+  var pluses = /\+/g;
+
+  function encode(s) {
+    return config.raw ? s : encodeURIComponent(s);
+  }
+
+  function decode(s) {
+    return config.raw ? s : decodeURIComponent(s);
+  }
+
+  function stringifyCookieValue(value) {
+    return encode(config.json ? JSON.stringify(value) : String(value));
+  }
+
+  function parseCookieValue(s) {
+    if (s.indexOf('"') === 0) {
+      s = s.slice(1, -1).replace(/\\"/g, '"').replace(/\\\\/g, '\\');
+    }
+
+    try {
+      s = decodeURIComponent(s.replace(pluses, ' '));
+      return config.json ? JSON.parse(s) : s;
+    } catch(e) {}
+  }
+
+  function read(s, converter) {
+    var value = config.raw ? s : parseCookieValue(s);
+    return $.isFunction(converter) ? converter(value) : value;
+  }
+
+  var config = $.cookie = function (key, value, options) {
+
+    if (arguments.length > 1 && !$.isFunction(value)) {
+      options = $.extend({}, config.defaults, options);
+
+      if (typeof options.expires === 'number') {
+        var days = options.expires, t = options.expires = new Date();
+        t.setMilliseconds(t.getMilliseconds() + days * 864e+5);
+      }
+
+      return (document.cookie = [
+        encode(key), '=', stringifyCookieValue(value),
+        options.expires ? '; expires=' + options.expires.toUTCString() : '', // use expires attribute, max-age is not supported by IE
+        options.path    ? '; path=' + options.path : '',
+        options.domain  ? '; domain=' + options.domain : '',
+        options.secure  ? '; secure' : ''
+      ].join(''));
+    }
+
+    var result = key ? undefined : {},
+      cookies = document.cookie ? document.cookie.split('; ') : [],
+      i = 0,
+      l = cookies.length;
+
+    for (; i < l; i++) {
+      var parts = cookies[i].split('='),
+        name = decode(parts.shift()),
+        cookie = parts.join('=');
+
+      if (key === name) {
+        result = read(cookie, value);
+        break;
+      }
+
+      if (!key && (cookie = read(cookie)) !== undefined) {
+        result[name] = cookie;
+      }
+    }
+
+    return result;
+  };
+
+  config.defaults = {};
+
+  $.removeCookie = function (key, options) {
+    $.cookie(key, '', $.extend({}, options, { expires: -1 }));
+    return !$.cookie(key);
+  };
+
+}));
+
+/*
+ show newsletter Modal
+ */
+ jQuery(function($) {
+   $(document).on('click', '#Modalnewsletter .checkbox-group', function() {
+      $.cookie('modalnewsletter', '1', { expires: 7 });
+  });
+  var modalnewsletter = $.cookie('modalnewsletter');
+
+  function initnewsLetterObj($obj) {
+      var pause = $obj.attr('data-pause');
+       setTimeout(function() {
+         $obj.modal('show');
+       }, pause);
+   };
+   var newsLetterObj = $('#Modalnewsletter');
+
+   if (modalnewsletter == 1) return;
+   if(newsLetterObj.length){
+       initnewsLetterObj(newsLetterObj);
+   };
+ });
+                     </pre>
+                     <br>
+                     <p>
+                        * If you want a picture on the background:<br>
+                     - аdd a picture with the name "newsletter-background.jpg" in images/custom/
+                     </p>
+                      <p>
+                         * If you want to change the time of appearance popup:<br>
+                     - in html change data-pause=2000
+                      </p>
+               </section>
+                <section class="chapter" id="header_menu">
+                  <h3>Menu settings</h3>
+                  1)You can adjust the delay and smooth appearance of the submenu. In js/main.js find:
+                  <pre class="brush: html">
+                    /* variables menu*/
+                     var header_menu_timeout = 500,
+                         header_menu_delay = 1200;
+                  </pre>
+                  2)You can cancel the menu lock when scrolling. You must add a class "disabled" in html:
+                   <pre class="brush: html">
+                    <!-- stuck nav -->
+                    <div class="stuck-nav disabled">
+                  </pre>
+               </section>
+               <section class="chapter" id="simple_menu">
+                  <h3>Simple menu</h3>
+                  A simple menu can be seen on index-simple-menu.html
+               </section>
+               <section class="chapter" id="editing_banner">
+                  <h3>Editing the banner (full width viewport)</h3>
+                  <h4>Arrow location</h4>
+                  <p>* Right bottom location - add the class "box-arrow-bottom-right". Example on index.html</p>
+                  <pre class="brush: html">
+                     &lt;div class="box-arrow-bottom-right"&gt;
+                               ...
+                     &lt;/div&gt;
+                  </pre>
+                  <br>
+                  <p>* Right top location - add the class "box-arrow-top-right". Example on index-04.html</p>
+                  <pre class="brush: html">
+                     &lt;div class="box-arrow-top-right"&gt;
+                               ...
+                     &lt;/div&gt;
+                  </pre>
+                  <br>
+                  <p>* Left bottom location, add the class "box-arrow-bottom-left". Example on index-08.html</p>
+                  <pre class="brush: html">
+                     &lt;div class="box-arrow-bottom-left"&gt;
+                               ...
+                     &lt;/div&gt;
+                  </pre>
+
+                  <h4>Arrow position</h4>
+                  <p>The position of the arrow can be changed by editing parameters:</p>
+                  <pre class="brush: html">
+                     &lt;path   transform="matrix(-1 0 0 1 300 0)
+                  </pre>
+
+                  <h4>Dimensions of the arrow</h4>
+                  <p>Dimensions of the arrow change in the template.scss - editing the width and height</p>
+
+                  <h4>Arrow animation the hover(move left and right)</h4>
+                  <p>If you want to remove the effect in the arrow the hover - remove the class "animation-hover"</p>
+                  <pre class="brush: html">
+                     &lt;div class="animation-hover"&gt;
+                               ...
+                     &lt;/div&gt;
+                  </pre>
+
+                  <h4>Arrow delete</h4>
+                  <p>If you want to remove the arrow - remove block with class: "svg-icon"</p>
+                   <pre class="brush: html">
+                     &lt;div class="svg-icon"&gt;
+                               ...
+                     &lt;/div&gt;
+                  </pre>
+
+                  <h4>Arrow delete with text</h4>
+                  <p>If you want to remove the arrow with text - remove all block with class: "box-arrow-bottom-right" or "box-arrow-top-right" or "box-arrow-bottom-left"</p>
+                  <h4>Arrow animation the hover(move left and right)</h4>
+                  <p>If you want to remove the effect in the arrow the hover - remove the class "animation-hover"</p>
+                  <pre class="brush: html">
+                     &lt;div class="animation-hover"&gt;
+                               ...
+                     &lt;/div&gt;
+                  </pre>
+                  <h4>Change image</h4>
+                  <p>* Replace the picture in the specified image path. The name of the image and the path to take from httml, in the place where you need to change, in the img tag. Example path:</p>
+                  <pre class="brush: html">
+                     &lt;img src="images/custom/promo-img-05.jpg"&gt;
+
+                  </pre>
+                  <h4>Zoom effect in the image</h4>
+                  <p>If you want to remove the zoom effect in the image with the hover - remove the class "zoom-in"</p>
+                  <pre class="brush: html">
+                     &lt;div class="home4_banner_big zoom-in"&gt;
+                               ...
+                     &lt;/div&gt;
+                  </pre>
+                  <h4>You can use the image instead of the arrow with the text</h4>
+                  <p>
+                     1) Remove all block with class: "box-arrow-bottom-right" or "box-arrow-top-right" or "box-arrow-bottom-left"
+                     <pre class="brush: html">
+                        &lt;div class="box-arrow-top-right"&gt;
+                                  ...
+                        &lt;/div&gt;
+                     </pre>
+                  </p>
+                  <p>
+                     2) Instead of a remote design - paste:
+                     <pre class="brush: html">
+                        &lt;div class="box-img-right-bottom"&gt;
+                              <div class="animation-hover">
+                                 <img src="images/custom/banner-promo-img01.png" alt="">
+                              </div>    ...
+                        &lt;/div&gt;
+                     </pre>
+                  </p>
+                  <p>
+                     3) Depending on the placement, add the required class:
+                     "box-img-right-top" or "box-img-right-bottom" or "box-img-left-top" or "box-img-left-bottom"
+                  </p>
+               </section>
+               <section class="chapter" id="embed_video">
+                  <h3>Embed video on the site</h3>
+                  <p>1)If you want to insert a video insert please a piece of code:</p>
+                  <pre class="brush: html">
+                     <div class="video-block">
+                        <a href="#" class="link-video"></a>
+                        <video class="movie" src="images/slides/video/video.mp4" poster="images/slides/video/video_img.jpg"></video>
+                     </div>
+                  </pre><br>
+                  <p>2)Change in the code:</p>
+                  <p>* the desired path to the video:</p>
+                   <pre class="brush: html">
+                     <video src="images/slides/video/video.mp4"></video>
+                  </pre><br>
+                  <p>* the right way to poster:</p>
+                   <pre class="brush: html">
+                    <video poster="images/slides/video/video_img.jpg"></video>
+                  </pre><br>
+               </section>
+               <section class="chapter" id="embed_video_product">
+                  <h3>Embedding video on product pages for product</h3>
+                  <p>You have the ability to connect videos from different sources(YouTube, Vimeo, video on your server). An example can be looked at product.html</p>
+                  <p>1) Add video from YouTube</p>
+                  <pre class="brush: html">
+                    <div class="video-link-product" data-toggle="modal" data-type="youtube" data-target="#modalVideoProduct" data-value="http://www.youtube.com/embed/JuO-wy0YxIs">
+                        <img src="images/product/product-small-empty.png" alt="" />
+                        <div>
+                           <span class="icon icon-videocam"></span>
+                           <span class="title">Video<br>Review</span>
+                        </div>
+                     </div>
+                  </pre><br>
+                  <p>* Сhange data-type="youtube"</p>
+                  <p>* Сhange a path to your video data-value="http://www.youtube.com/embed/JuO-wy0YxIs". <a target="_blank" href="https://support.google.com/youtube/answer/171780?hl=en">Documentation "How to correctly add a video path"</a></p>
+                  <p>2) Add video from  Vimeo</p>
+                  <pre class="brush: html">
+                    <div class="video-link-product" data-toggle="modal" data-type="vimeo" data-target="#modalVideoProduct" data-value="http://www.youtube.com/embed/JuO-wy0YxIs">
+                        <img src="images/product/product-small-empty.png" alt="" />
+                        <div>
+                           <span class="icon icon-videocam"></span>
+                           <span class="title">Video<br>Review</span>
+                        </div>
+                     </div>
+                  </pre><br>
+                  <p>* Сhange data-type="vimeo"</p>
+                  <p>* Сhange a path to your video data-value="https://player.vimeo.com/video/214526898"</p>
+                  <p>3) Add video from your server</p>
+                  <pre class="brush: html">
+                    <div class="video-link-product" data-toggle="modal" data-type="video" data-target="#modalVideoProduct" data-value="images/slides/video/video.mp4">
+                        <img src="images/product/product-small-empty.png" alt="" />
+                        <div>
+                           <span class="icon icon-videocam"></span>
+                           <span class="title">Video<br>Review</span>
+                        </div>
+                     </div>
+                  </pre><br>
+                  <p>* Сhange data-type="video"</p>
+                  <p>* Сhange a path to your video data-value="images/slides/video/video.mp4"</p>
+               </section>
+               <section class="chapter" id="hover_product">
+                  <h3>Cancel the hover on the product</h3>
+                  <p>You can Cancel the hover on the product by adding the class "no-hover"</p>
+                   <pre class="brush: html">
+                    <div class="product no-hover">
+                    </div>
+                  </pre>
+               </section>
+               <section class="chapter" id="main_setup">
+                  <h3>Mail setup - contact.html</h3>
+                  <p>If you want to configure mail for yourself.  Find file by path 'external/form/contact-form.php'. In it, change the field:</p>
+                   <pre class="brush: html">
+                     // youremail here
+                     $to = "dogotar777@gmail.com";
+                  </pre><br>
+                  <p>*Write your email instead dogotar777@gmail.com</p>
+               </section>
+            </div>
+         </div>
+      </div>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+      <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+      <script type="text/javascript" src="assets/js/jasny-bootstrap.min.js"></script>
+      <script src="assets/js/shCore.js"></script>
+      <script src="assets/js/shBrushCss.js"></script>
+      <script src="assets/js/shBrushXml.js"></script>
+      <script src="assets/js/shBrushJScript.js"></script>
+      <script>SyntaxHighlighter.defaults['toolbar'] = false;
+         SyntaxHighlighter.all();
+      </script>
+      <script>
+         $(document).ready(function() {
+          $('.nav.navmenu-nav a').click(function(){
+            $('.nav.navmenu-nav a').removeClass('active');
+            $(this).addClass('active');
+            $('html, body').animate({
+              scrollTop: $( $(this).attr('href') ).offset().top - 100
+            }, 500);
+            return false;
+          });
+           $('.dropdown').on('show.bs.dropdown', function(e){
+             $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
+           });
+           $('.dropdown').on('hide.bs.dropdown', function(e){
+             $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
+           });
+         });
+      </script>
+   </body>
+</html>

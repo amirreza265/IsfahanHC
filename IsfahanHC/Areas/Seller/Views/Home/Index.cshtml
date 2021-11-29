@@ -1,0 +1,48 @@
+﻿@model IEnumerable<ShowProductViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Seller/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<h1>مدیریت فروشگاه</h1>
+<br />
+<a class="btn btn-block btn-outline-primary"
+   asp-action="add"
+   asp-controller="product"
+   asp-area="seller">افزودن کالا</a>
+<table class="table table-hover table-striped" >
+    <thead class="thead-light">
+        <tr>
+            <th>نام</th>
+            <th>قیمت</th>
+            <th>تعداد</th>
+            <th>دستور</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Price</td>
+                <td>@item.QuantityInStock</td>
+                <td>
+                    <div class="btn-group">
+                        <a class="btn btn-outline-primary"
+                           asp-area="seller"
+                           asp-controller="Product"
+                           asp-action="Edit"
+                           asp-route-productId="@item.ProductId">ویرایش</a>
+                        <a class="btn btn-outline-danger"
+                           asp-area="Seller"
+                           asp-controller="product"
+                           asp-action="Remove"
+                           asp-route-productId="@item.ProductId">حذف</a>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

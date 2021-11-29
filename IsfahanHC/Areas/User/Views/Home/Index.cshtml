@@ -1,0 +1,113 @@
+﻿@model IsfahanHC.Models.ViewModels.User.UserProfileViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/User/Views/Shared/_Layout.cshtml";
+}
+
+<h1>حساب کاربری @User.FindFirstValue(ClaimTypes.Name)</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <p class="">
+            لیست فاکتور
+        </p>
+        <br />
+        <div class="accordion" id="accordionExample">
+            @foreach (var order in Model.Orders)
+            {
+                <div class="card">
+                    <div class="card-header" id="heading@(order.OrderId)">
+                        <h2 class="mb-0">
+                            <button class="btn btn-outline-info d-flex w-100 justify-content-between" type="button" data-toggle="collapse" data-target="#collapse@(order.OrderId)" aria-expanded="true" aria-controls="collapse@(order.OrderId)">
+                                <h5 class="mb-1">فاکتور شماره : @order.OrderId</h5>
+                                <small class="@((order.IsPaid)?"text-muted":"text-black")">@((order.IsPaid)?"پرداخت شده": "فاکتور فعلی")</small>
+                            </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapse@(order.OrderId)" class="collapse" aria-labelledby="heading@(order.OrderId)" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <p class="mb-1">مجموع قیمت خرید : @order.TotalPrice.ToString("##")</p>
+                            <small class="@((order.IsPaid)?"text-muted":"text-black-50")">تاریخ ایجاد : @order.CreateTime</small>
+                            <br />
+                            @if (order.IsPaid)
+                            {
+                                <small class="@((order.IsPaid) ? "text-muted" : "text-black-50")">تاریخ پرداخت : @order.PaidTime</small>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+    </div>
+    <div class="col-md-6">
+        <p>
+            لیست کالا های خریداری شده
+        </p>
+        @{ 
+            var products = Model.Orders
+                .SelectMany(o => o.OrderItems
+                .Select(ot => new {
+                        name = ot.ProductName,
+                        price = ot.Price,
+                        quantity = ot.Quantity,
+                        id = ot.ProductId,
+                        orderId = o.OrderId,
+                        payTime = o.PaidTime,
+                        isPaid = o.IsPaid
+                    }));
+        }
+        <br />
+        <div class="accordion" id="accordionExample">
+            @foreach (var pro in products)
+            {
+                <div class="card">
+                    <div class="card-header" id="heading@(pro.orderId)">
+                        <h2 class="mb-0">
+                            <button class="btn btn-outline-info d-flex w-100 justify-content-between" type="button" data-toggle="collapse" data-target="#collapse@(pro.orderId)" aria-expanded="true" aria-controls="collapse@(pro.orderId)">
+                                <h5 class="mb-1">@pro.name</h5>
+                                <small class="text-black-50">تعداد : @pro.quantity</small>
+                            </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapse@(pro.orderId)" class="collapse" aria-labelledby="heading@(pro.orderId)" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <p class="mb-1">قیمت : @pro.price.ToString("##")</p>
+                            <small class="text-black-50">شماره فاکتور : @pro.orderId</small>
+                            <br />
+                            @if (pro.isPaid)
+                            {
+                                <small class="text-black-50">تاریخ پرداخت : @pro.payTime</small>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@*<div class="accordion" id="accordionExample">
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Collapsible Group Item #1
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">فاکتور شماره : @order.OrderId</h5>
+                        <small class="@((order.IsPaid)?"text-muted":"text-white")">@((order.IsPaid)?"پرداخت شده": "فاکتور فعلی")</small>
+                    </div>
+                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                    <small class="@((order.IsPaid)?"text-muted":"text-white-50")">تاریخ ایجاد : @order.CreateTime</small>
+                </div>
+            </div>
+        </div>
+    </div>*@

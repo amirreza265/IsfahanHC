@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    @RenderSection("Meta" , required:false)
+    <title>@ViewData["Title"] - IsfahanHC</title>
+    <link href="~/lib/bootstrap-4.5.2-dist-rtl/css/bootstrap.min.rtl.css" rel="stylesheet" />
+    @RenderSection("Stylesheet", required: false)
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand dropright" asp-action="Index" asp-controller="Home">فروشگاه صنایع دستی اصفهان</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarsExample07">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-action="Index" asp-controller="Home">صفحه اصلی</a>
+                        </li>
+                    </ul>
+                        <partial name="_LoginPartial" />
+                    <form asp-action="Search"
+                          asp-route-filter="search"
+                          class="form-inline my-2 my-md-0">
+                        <input class="form-control" name="filter" type="text" placeholder="جستجو" aria-label="Search">
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container row">
+        <div class="col-md-3 jumbotron">
+            <partial name="_StorsList" />
+        </div>
+        <div class="col-md-9">
+            @RenderBody()
+        </div>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 1400 - IsfahanHC - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap-4.5.2-dist-rtl/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
